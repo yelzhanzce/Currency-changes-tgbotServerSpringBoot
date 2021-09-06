@@ -77,7 +77,7 @@ public class ScheduledTasks {
                 currencyService.save(currencyUSD);
                 currencyService.save(currencyEUR);
                 currencyService.save(currencyRUB);
-                double tenPercent = 0.0;
+                double tenPercent = 10.0;
                 List<User> users = null;
                 if(currencyUSD.getChanges() >= tenPercent || currencyUSD.getChanges() <= -tenPercent || currencyEUR.getChanges() >= tenPercent || currencyEUR.getChanges() <= -tenPercent || currencyRUB.getChanges() >= tenPercent || currencyRUB.getChanges() <= -tenPercent){
                     users = userService.findAll();
